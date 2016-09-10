@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="SignUp" Language="C#" AutoEventWireup="true" CodeBehind="CreatingUserAccounts.aspx.cs" Inherits="Alameers.Membership.CreatingUserAccounts" MasterPageFile="~/Master_View.Master" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server" ID="HeadContent">
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
 </asp:Content>
 
 
