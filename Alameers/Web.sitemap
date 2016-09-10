@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="Home"  description="">
+      
+      <siteMapNode url="" title="Basic"  description="">
+        <siteMapNode url="" title="Learn C#"></siteMapNode>
+        <siteMapNode url="" title="Learn C++"></siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="Web"  description="">
+        <siteMapNode url="" title="ASP.NET"></siteMapNode>
+        <siteMapNode url="" title="MVC"></siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="DBs"  description="">
+        <siteMapNode url="" title="ADO.NET"></siteMapNode>
+        <siteMapNode url="" title="SQL SERVER"></siteMapNode>
+        <siteMapNode url="" title="Entity Framework"></siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode  title="Join Us"  description="">
+        <siteMapNode url="~\Membership\CreatingUserAccounts.aspx" title="Creating User Accounts"></siteMapNode>
+        <siteMapNode url="" title="Additional User Info"></siteMapNode>
+        <siteMapNode url="" title="Enhanced Create User Wizard"></siteMapNode>
+        <siteMapNode url="" title="User Based Authorization"></siteMapNode>
+        <siteMapNode url="" title="Guest Book"></siteMapNode>
+      </siteMapNode>
+
+    </siteMapNode>
+</siteMap>

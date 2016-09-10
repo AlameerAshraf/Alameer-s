@@ -1,0 +1,212 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master_View.master.cs" Inherits="Alameers.Master_View" %>
+
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head runat="server">
+    <title>Alameer's - <%: Page.Title %></title>
+    <link href="/img/Main/Icon.png" rel="shortcut icon" />
+    <!-- meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Bootstrap Core CSS -->
+    <link href="/Content/ProjectCSS/bootstrap.css" rel="stylesheet" />
+    <!-- Template CSS -->
+    <link href="/Content/ProjectCSS/animate.css" rel="stylesheet" />
+    <link href="/Content/ProjectCSS/font-awesome.css" rel="stylesheet" />
+    <link href="/Content/ProjectCSS/nexus.css" rel="stylesheet" />
+    <link href="/Content/ProjectCSS/responsive.css" rel="stylesheet" />
+    <link href="/Content/ProjectCSS/custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css" />
+    <!-- JS -->
+    <script src="/Scripts/ProjectJS/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="/Scripts/ProjectJS/scripts.js"></script>
+    <!-- Isotope - Portfolio Sorting -->
+    <script src="/Scripts/ProjectJS/jquery.isotope.js"></script>
+    <!-- Mobile Menu - Slicknav -->
+    <script src="/Scripts/ProjectJS/jquery.slicknav.js"></script>
+    <!-- Animate on Scroll-->
+    <script src="/Scripts/ProjectJS/jquery.visible.js"></script>
+    <!-- Slimbox2-->
+    <script src="/Scripts/ProjectJS/slimbox2.js" charset="utf-8"></script>
+    <!-- Modernizr -->
+    <script src="/Scripts/ProjectJS/modernizr.custom.js"></script>
+    <!-- End JS -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <div id="pre_header" class="visible"></div>
+    <div id="header" class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" title="">
+                    <img src="/img/Main/logo.png" alt="Logo" />
+                </a>
+            </div>
+            <!-- End Logo -->
+            <div class="col-md-12 margin-top-30">
+                <div id="hornav" class="pull-right visible-lg">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                        </li>
+                        <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
+
+                            <ItemTemplate>
+                                <li>
+                                    <asp:HyperLink ID="lnkMenuItem" runat="server"
+                                        NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+
+                                    <asp:Repeater ID="submenu" runat="server" DataSource="<%#((SiteMapNode) Container.DataItem).ChildNodes %>">
+                                        <HeaderTemplate>
+                                            <ul>
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:HyperLink ID="lnkMenuItem" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+                                            </li>
+                                        </ItemTemplate>
+                                        <FooterTemplate>
+                                            </ul>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                         <li>
+                            <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Default.aspx">General</asp:HyperLink>
+                        </li>
+                         <li>
+                            <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Default.aspx">Alameer's</asp:HyperLink>
+                        </li>
+                    </ul>
+
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+    <div id="base">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Thumbs Gallery -->
+                <div class="clearfix"></div>
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Qualifications</h3>
+                    <p>
+                        Mansoura University FCIS ,<br />
+                        Computer Science Department ,<br />
+                        .NET Developer,<br />
+                        First Place in the Fourth Conference for Scientific Researches and Projects
+                        for the Egyptian university students,<br />
+                    </p>
+                </div>
+                <!-- End Thumbs Gallery -->
+                <!-- Contact Details -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Contact Details</h3>
+                    <p>
+                        Egypt - Kafr-Elshiekh,<br />
+                        0020-1095708484<br />
+                        <a href="www.facebook.com" class="fa-facebook">Facebbok</a><br />
+                        <a href="www.facebook.com" class="fa-twitter">Twitter</a><br />
+                        <a href="www.facebook.com" class="fa-linkedin">LinkedIn</a><br />
+                        <a href="www.facebook.com" class="fa-github">GitHub</a><br />
+                    </p>
+
+                    <p>
+                        Email: <a href="mailto:alamiir.ashraf@gmail.com">alamiir.ashraf@gmail.com</a><br />
+                        Website: <a href="https\\:WWW.Alameers.net/">www.Alameers.net</a>
+                    </p>
+                </div>
+                <!-- End Contact Details -->
+                <!-- Sample Menu -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Easy Access</h3>
+                    <ul class="menu">
+                        <li>
+                            <a class="fa-tasks" href="#">Best 10 articles</a>
+                        </li>
+                        <li>
+                            <a class="fa-users" href="#">Invite Yours to learn</a>
+                        </li>
+                        <li>
+                            <a class="fa-signal" href="#">apply to work with us</a>
+                        </li>
+                        <li>
+                            <a class="fa-coffee" href="#">giva us ideas</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- End Sample Menu -->
+                <!-- Disclaimer -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Goal and Functionality</h3>
+                    <p>
+                        In this site i'm trying to make the process of learning easy as possible as i can , Demonstrating the articles , code smaples , images and tools for biggeners in the field or professionals , Also sharing your experince and desiers to help you efficency.<br />
+                        - Alameer Ashraf
+                    </p>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Disclaimer -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="visible-lg">
+        <div class="container">
+            <div class="row">
+                <div id="copyright" class="col-md-4">
+                    <p>Alameer Ashraf Hassan</p>
+                </div>
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li>
+                            <a href="https://msdn.microsoft.com/en-us/default.aspx" target="_blank">Microsoft Developer Network</a>
+                        </li>
+                        <li>
+                            <a href="https://mva.microsoft.com/" target="_blank">Microsoft Virtual Academy</a>
+                        </li>
+                        <li>
+                            <a href="https://azure.microsoft.com/en-us/develop/net/aspnet/" target="_blank">Microsoft Azure</a>
+                        </li>
+                        <li>
+                            <a href="http://www.asp.net/" target="_blank">ASP.NET</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
