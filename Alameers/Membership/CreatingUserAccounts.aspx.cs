@@ -22,43 +22,41 @@ namespace Alameers.Membership
 
         protected void CreateUserAccount (object sender , EventArgs e)
         {
-            if ( Terms.Checked != true)
-            {
-                Termslb.InnerText = "You have to read the terms , or at least check the box "; 
-            }
+          
+                MembershipCreateStatus Result;
+                MembershipUser NewUser = System.Web.Security.Membership.CreateUser(UserName.Value, Password.Value, Email.Value, PreSecurityQuestion, SecurityAnswer.Value, true, out Result);
+                switch (Result)
+                {
+                    case MembershipCreateStatus.Success:
+                    Response.Redirect("~/Home.aspx"); 
+                        break;
 
-            MembershipCreateStatus Result; 
-            MembershipUser NewUser = System.Web.Security.Membership.CreateUser(UserName.Value , Password.Value ,Email.Value , PreSecurityQuestion , SecurityAnswer.Value ,true , out Result); 
-            switch (Result)
-            {
-                case MembershipCreateStatus.Success:
-                   // Response.Redirect("");
-                    break;
+                    case MembershipCreateStatus.DuplicateUserName:
+                        UserNamelb.InnerText = "Your user name alredy existed , Try new one !";
+                        break;
 
-                case MembershipCreateStatus.DuplicateUserName:
-                    UserNamelb.InnerText = "Your user name alredy existed , Try new one !";
-                    break;
+                    case MembershipCreateStatus.DuplicateEmail:
+                        Emaillb.InnerText = "Your email address alredt existed , Try new one ! ";
+                        break;
 
-                case MembershipCreateStatus.DuplicateEmail:
-                    Emaillb.InnerText = "Your email address alredt existed , Try new one ! ";
-                    break;
+                    case MembershipCreateStatus.InvalidEmail:
+                        Emaillb.InnerText = "Invalid email address , Try a valid one !";
+                        break;
 
-                case MembershipCreateStatus.InvalidEmail:
-                    Emaillb.InnerText = "Invalid email address , Try a valid one !";
-                    break;
+                    case MembershipCreateStatus.InvalidAnswer:
+                        SecurityAnswerlb.InnerText = "Invalid security answer , Try new one !";
+                        break;
 
-                case MembershipCreateStatus.InvalidAnswer:
-                    SecurityAnswerlb.InnerText = "Invalid security answer , Try new one !";
-                    break; 
 
                 case MembershipCreateStatus.InvalidPassword:
-                    passwordlb.InnerText = "Password inavlid";
-                    break;
+                    passwordlb.InnerText = "Invalid password";
+                    break; 
 
-                default:
-                    Termslb.InnerText = "Unexpexted error has happened  , Try again !";
-                    break;
-            }
+                    default:
+                        Termslb.InnerText = "Unexpexted error has happened  , Try again !";
+                        break;
+                }
+            
             
         }
     }

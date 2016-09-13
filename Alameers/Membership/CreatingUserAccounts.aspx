@@ -9,7 +9,7 @@
         <div class="row margin-vert-30">
             <div class="col-md-6 col-md-offset-3 col-sm-offset-3">
 
-                <form data-toggle="validator" name="myform" role="form" class="signup-page" id="SignupForm" runat="server"  >
+                <form data-toggle="validator" name="myform" role="form" class="signup-page" id="SignupForm" runat="server" novalidate="novalidate"  >
                     <div class="signup-header">
                         <h2>Join  <a href="#" style="font-family: Buxton Sketch;">ALAMEER’S</a> Now!</h2>
                         <p >
