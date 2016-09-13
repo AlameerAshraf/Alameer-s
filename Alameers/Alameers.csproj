@@ -346,7 +346,6 @@
     <Content Include="Scripts\ProjectJS\jquery.slicknav.js" />
     <Content Include="Scripts\ProjectJS\jquery.visible.js" />
     <Content Include="Scripts\ProjectJS\modernizr.custom.js" />
-    <Content Include="Scripts\ProjectJS\RegisterationValidation.js" />
     <Content Include="Scripts\ProjectJS\scripts.js" />
     <Content Include="Scripts\ProjectJS\slimbox2.js" />
     <Content Include="Scripts\respond.js" />
