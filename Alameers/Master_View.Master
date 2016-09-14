@@ -56,8 +56,8 @@
         <div class="row">
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html" title="">
-                    <img src="/img/Main/logo.png" alt="Logo" />
+                <a href="Home.html" title="Alameer's">
+                    <img src="/img/Main/logo.png" alt="Logo"/>
                 </a>
             </div>
             <!-- End Logo -->
@@ -94,8 +94,9 @@
                             <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Default.aspx">General</asp:HyperLink>
                         </li>
                          <li>
-                            <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Default.aspx">Alameer's</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="About.aspx">About</asp:HyperLink>
                         </li>
+
                     </ul>
 
                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
