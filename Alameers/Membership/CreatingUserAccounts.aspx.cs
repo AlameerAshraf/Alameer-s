@@ -22,13 +22,16 @@ namespace Alameers.Membership
 
         protected void CreateUserAccount (object sender , EventArgs e)
         {
-          
+
+        
+            
+
                 MembershipCreateStatus Result;
                 MembershipUser NewUser = System.Web.Security.Membership.CreateUser(UserName.Value, Password.Value, Email.Value, PreSecurityQuestion, SecurityAnswer.Value, true, out Result);
                 switch (Result)
                 {
                     case MembershipCreateStatus.Success:
-                    Response.Redirect("~/Home.aspx"); 
+                        Response.Redirect("~/Home.aspx");
                         break;
 
                     case MembershipCreateStatus.DuplicateUserName:
@@ -48,16 +51,30 @@ namespace Alameers.Membership
                         break;
 
 
-                case MembershipCreateStatus.InvalidPassword:
-                    passwordlb.InnerText = "Invalid password";
-                    break; 
+                    case MembershipCreateStatus.InvalidPassword:
+                        passwordlb.InnerText = "Invalid password";
+                        break;
 
                     default:
                         Termslb.InnerText = "Unexpexted error has happened  , Try again !";
                         break;
                 }
             
+
             
+            
+            
+
+            
+            
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs e)
+        {
+            if (Terms.Checked == true)
+               e.IsValid = true;
+            else
+                e.IsValid = false;
         }
     }
 }
