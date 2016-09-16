@@ -11,29 +11,33 @@
                     <form class="login-page">
 
                         <div class="login-header margin-bottom-30">
-                            <h2>Login , and work hard !</h2>
+                            <h2>Login Now !</h2>
                         </div>
 
                         <div class="input-group margin-bottom-20">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input placeholder="Username" class="form-control" type="text">
+                            <input id="UserNameLgN" runat="server" placeholder="Username" class="form-control" type="text">
                         </div>
 
                         <div class="input-group margin-bottom-20">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input placeholder="Password" class="form-control" type="password">
+                            <input id="PasswordLgN" runat="server" placeholder="Password" class="form-control" type="password">
+
                         </div>
 
                         <div class="row">
 
                             <div class="col-md-6">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    Stay signed in</label>
+
+                             
+                                <label  class="checkbox">
+                                    <input id="StayLogged" runat="server" type="checkbox">
+                                    Remember Me</label>
+                                 <label id="ValidLogInAttempte" runat="server" class="help-block" style="color: red; font-weight: bold;"></label>
                             </div>
 
                             <div class="col-md-6">
-                                <button class="btn btn-primary pull-right" type="submit">Login</button>
+                                <button class="btn btn-primary pull-right" onclick="LogIn"  type="submit">Login</button>
                             </div>
 
                         </div>

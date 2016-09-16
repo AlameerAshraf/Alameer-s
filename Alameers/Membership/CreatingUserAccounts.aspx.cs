@@ -69,12 +69,6 @@ namespace Alameers.Membership
             
         }
 
-        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs e)
-        {
-            if (Terms.Checked == true)
-               e.IsValid = true;
-            else
-                e.IsValid = false;
-        }
+
     }
 }
