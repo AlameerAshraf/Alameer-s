@@ -26,9 +26,9 @@
 
                     <div class="clearfix"></div>
                     <p>I'm a fresh graduated student from Mansoura University Fuclty of Computers and information , Computer Science Department , i'm very intrersted in bulding interactive software pieces such as web sites or windows applications , i'm very passion in algorithms and data structres and such skills .</p>
-                    <p>Trying to help me friends in the field or outside it , i have decided to construct that web site which is an article-based web site to help them to learn some new or advanced computer programming and techniques , every one who has an account can access to articles that has an explaination for a topic ,according to my field i started with .NET framework topics and the basis in C# and C++ programming langauge , every one who has an attitude to help people can write his own article and publish it dierctly online.</p>
+                    <p>Trying to help my friends in the field or outside it , I have decided to construct that web site which is an article-based web site to help them to learn some new or advanced computer programming and techniques , Every one who has an account can access to articles that has an explaination for a topic , According to my field i started with .NET framework topics and the basis in C# and C++ programming langauge , Every one who has an attitude to help people can write his own article and publish it dierctly online.</p>
                     <p>I hope I can help you to learn what you wish to , and i hope if you have the hand to help others to learn ! </p>
-                    <p>If you have any kind of Suggestions or Opinions please don't hesitate to <a href="Contact.aspx" style="font-weight: bold; color: darkred;">Notify Me By Sending it Dierctly.</a> Or contact me over social gates. <3</p>
+                    <p>If you have any kind of Suggestions or Opinions please don't hesitate to <a href="Contact.aspx" style="font-weight: bold; color: darkred;">Notify me by Sending it here !</a> Or contact me over social gates. &#128525; </p>
                 </div>
 
             </div>

@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row margin-vert-30">
                 <div class="col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <form class="login-page">
+                    <form class="login-page" runat="server">
 
                         <div class="login-header margin-bottom-30">
                             <h2>Login Now !</h2>
@@ -33,11 +33,11 @@
                                 <label  class="checkbox">
                                     <input id="StayLogged" runat="server" type="checkbox">
                                     Remember Me</label>
-                                 <label id="ValidLogInAttempte" runat="server" class="help-block" style="color: red; font-weight: bold;"></label>
+                                 <label id="ValidatLogInAttempte" runat="server" class="help-block" style="color: red; font-weight: bold;"></label>
                             </div>
 
                             <div class="col-md-6">
-                                <button class="btn btn-primary pull-right" onclick="LogIn"  type="submit">Login</button>
+                                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="LoginPart" CssClass="btn btn-primary pull-right"/>
                             </div>
 
                         </div>

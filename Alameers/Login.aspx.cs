@@ -15,16 +15,18 @@ namespace Alameers
 
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        protected void LoginPart(object sender, EventArgs e)
         {
-            // Validate the user against the Membership framework user store
-            if (System.Web.Security.Membership.ValidateUser(UserNameLgN.Value, PasswordLgN.Value))
+            if (System.Web.Security.Membership.ValidateUser(UserNameLgN.Value,PasswordLgN.Value))
             {
-                // Log the user into the site
-                FormsAuthentication.RedirectFromLoginPage(UserNameLgN.Value, StayLogged.Checked);
+                Response.Redirect("Home.aspx");
+                //FormsAuthentication.RedirectFromLoginPage(UserNameLgN.Value, true); 
             }
-            // If we reach here, the user's credentials were invalid
-            ValidLogInAttempte.InnerText = "Invalid Log in attempte , Try again ! ";
+            else
+            {
+                Response.Redirect("About.aspx");
+                //ValidatLogInAttempte.InnerText = "Invalid Log In process , Please try again !"; 
+            }
         }
     }
 }
