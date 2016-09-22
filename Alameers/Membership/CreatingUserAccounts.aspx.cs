@@ -31,7 +31,7 @@ namespace Alameers.Membership
                 switch (Result)
                 {
                     case MembershipCreateStatus.Success:
-                        Response.Redirect("~/Home.aspx");
+                        Response.Redirect("~/Login.aspx");
                         break;
 
                     case MembershipCreateStatus.DuplicateUserName:

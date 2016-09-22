@@ -16,36 +16,39 @@
 
                         <div class="input-group margin-bottom-20">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input id="UserNameLgN" runat="server" placeholder="Username" class="form-control" type="text">
+                            <input id="UserNameLgN" runat="server" placeholder="Username" class="form-control" type="text" required="required">
                         </div>
 
                         <div class="input-group margin-bottom-20">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input id="PasswordLgN" runat="server" placeholder="Password" class="form-control" type="password">
+                            <input id="PasswordLgN" runat="server" placeholder="Password" class="form-control" type="password" required="required">
+                        </div>
 
+                        <div class="input-group margin-bottom-20">
+                            <span class="input-group-addon"><i class="fa fa-bookmark"></i></span>
+                            <input id="EmailLgN" runat="server" placeholder="Email" class="form-control" type="email" required="required">
                         </div>
 
                         <div class="row">
-
                             <div class="col-md-6">
-
-                             
-                                <label  class="checkbox">
+                                <label class="checkbox">
                                     <input id="StayLogged" runat="server" type="checkbox">
                                     Remember Me</label>
-                                 <label id="ValidatLogInAttempte" runat="server" class="help-block" style="color: red; font-weight: bold;"></label>
                             </div>
 
                             <div class="col-md-6">
-                                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="LoginPart" CssClass="btn btn-primary pull-right"/>
+                                <asp:Button ID="loginbtn" runat="server" Text="Button" OnClick="Authenticate_Login" CssClass="btn btn-primary pull-right" />
                             </div>
-
                         </div>
-                        <hr>
 
+                        <label id="ValidatLogInAttempte" runat="server" class="help-block" style="color: red; font-size: smaller;"></label>
+
+                        <hr>
                         <h4>Forget your Password ?</h4>
-                        <p><a href="#" style="color:darkred; font-weight:bold;">Click here</a> to reset your password.</p>
+                        <p><a href="#" style="color: darkred; font-weight: bold;">Click here</a> to reset your password.</p>
                     </form>
+
+
                 </div>
             </div>
         </div>
