@@ -65,7 +65,7 @@
                 <div id="hornav" class="pull-right visible-lg">
                     <ul class="nav navbar-nav">
                         <li>
-                            <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
                         </li>
                         <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
 
@@ -91,7 +91,7 @@
                             </ItemTemplate>
                         </asp:Repeater>
                          <li>
-                            <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Default.aspx">General</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
                         </li>
                          <li>
                             <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="About.aspx">About</asp:HyperLink>
@@ -142,10 +142,6 @@
                         <a href="www.facebook.com" class="fa-github">GitHub</a><br />
                     </p>
 
-                    <p>
-                        Email: <a href="mailto:alamiir.ashraf@gmail.com">alamiir.ashraf@gmail.com</a><br />
-                        Website: <a href="https\\:WWW.Alameers.net/">www.Alameers.net</a>
-                    </p>
                 </div>
                 <!-- End Contact Details -->
                 <!-- Sample Menu -->
@@ -174,7 +170,6 @@
                     <h3 class="margin-bottom-10">Goal and Functionality</h3>
                     <p>
                         In this site i'm trying to make the process of learning easy as possible as i can , Demonstrating the articles , code smaples , images and tools for biggeners in the field or professionals , Also sharing your experince and desiers to help you efficency.<br />
-                        - Alameer Ashraf
                     </p>
                     <div class="clearfix"></div>
                 </div>
@@ -188,7 +183,7 @@
         <div class="container">
             <div class="row">
                 <div id="copyright" class="col-md-4">
-                    <p>Alameer Ashraf Hassan</p>
+                    <p>Alameer Ashraf</p>
                 </div>
                 <div id="footermenu" class="col-md-8">
                     <ul class="list-unstyled list-inline pull-right">
