@@ -19,7 +19,7 @@ namespace Alameers
 
         protected void SendMessage(object sender, EventArgs e)
         {
-            string AdminstratorMail = "";
+            string AdminstratorMail = "alameerelnagar94@gmail.com";
             string Name = NameOfUser.Value.ToString();
             string Email = EmailOfUser.Value;
             string Subject = SubjectOfMessageOfUser.Value.ToString();
@@ -37,7 +37,7 @@ namespace Alameers
             smtp.Host = "smtp.gmail.com";
             System.Net.NetworkCredential NetworkCardential = new System.Net.NetworkCredential();
             NetworkCardential.UserName = "AlameersDevelopers@gmail.com";
-            NetworkCardential.Password = "";
+            NetworkCardential.Password = "aaa123456789";
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = NetworkCardential;
             smtp.Port = 587;
