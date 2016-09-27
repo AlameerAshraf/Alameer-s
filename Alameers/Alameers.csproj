@@ -254,6 +254,7 @@
     <Content Include="App_Data\MembersMangement_log.ldf">
       <DependentUpon>MembersMangement.mdf</DependentUpon>
     </Content>
+    <Content Include="articles\Article.aspx" />
     <Content Include="articles\CategoryArticlesList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -533,6 +534,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="articles\Article.aspx.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles\Article.aspx.designer.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+    </Compile>
     <Compile Include="articles\CategoryArticlesList.aspx.cs">
       <DependentUpon>CategoryArticlesList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
