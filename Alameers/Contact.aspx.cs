@@ -43,6 +43,11 @@ namespace Alameers
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.Send(myMessage);
+
+            NameOfUser.Value = String.Empty;
+            EmailOfUser.Value = String.Empty;
+            MessageOfUser.Value = String.Empty;
+            SubjectOfMessageOfUser.Value = String.Empty;
         }
 
 
