@@ -16,50 +16,55 @@
                     <label>Name</label>
                     <div class="row margin-bottom-20">
                         <div class="col-md-6 col-md-offset-0">
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="NameOfUser" runat="server">
                         </div>
                     </div>
 
                     <label>Email <span class="color-darkred">*</span></label>
                     <div class="row margin-bottom-20">
                         <div class="col-md-6 col-md-offset-0">
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="EmailOfUser" runat="server">
+                        </div>
+                    </div>
+
+                      <label>Subject <span class="color-darkred">*</span></label>
+                    <div class="row margin-bottom-20">
+                        <div class="col-md-6 col-md-offset-0">
+                            <input class="form-control" type="text" id="SubjectOfMessageOfUser" runat="server">
                         </div>
                     </div>
 
                     <label>Message <span class="color-darkred">*</span></label>
                     <div class="row margin-bottom-20">
                         <div class="col-md-8 col-md-offset-0">
-                            <textarea rows="8" class="form-control"></textarea>
+                            <textarea rows="8" class="form-control" id="MessageOfUser" runat="server"></textarea>
                         </div>
                     </div>
-
-                    <p>
-                        <button type="submit" class="btn btn-primary">Send Message</button></p>
+                    <asp:Button ID="Send" runat="server" Text="Send Message" CssClass="btn btn-primary" OnClick="SendMessage" />
                 </form>
             </div>
-            	<div class="col-md-3">
-				<!-- Recent Posts -->
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Contact Info</h3>
-					</div>
-					<div class="panel-body">
-						<p>If you want to contact dierctly to me,and i will response immediatly to your message!</p>
-						<ul class="list-unstyled">
-							<li><i class="fa-phone color-primary"></i>+0020-10-95708484</li>
-							<li><i class="fa-envelope color-primary"></i>alamiir.ashraf@gmail.com</li>
+            <div class="col-md-3">
+                <!-- Recent Posts -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contact Info</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>If you want to contact dierctly to me,and i will response immediatly to your message!</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-phone color-primary"></i>+0020-10-95708484</li>
+                            <li><i class="fa-envelope color-primary"></i>alamiir.ashraf@gmail.com</li>
                             <li><i class="  fa-linkedin color-primary"></i><a href="https://www.linkedin.com/in/alameer-ashraf-93045b124">Al-ameer Ashraf</a></li>
-						</ul>
-					
-					</div>
-				</div>
-				<!-- End recent Posts -->
-				<!-- About -->
-			
-				<!-- End About -->
-				
-			</div>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- End recent Posts -->
+                <!-- About -->
+
+                <!-- End About -->
+
+            </div>
         </div>
     </div>
 </asp:Content>
